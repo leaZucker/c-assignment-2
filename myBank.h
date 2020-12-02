@@ -11,13 +11,13 @@
 	int rate;
 	int new_account;
 	
-	void pressO(int account_number, double amount);
+	void pressO(int account_number);
 	
 	void pressB(int account_number);
 	
-	void pressD(int account_number, double amount);
+	void pressD(int account_number);
 
-	void pressW(int account_number, double amount);
+	void pressW(int account_number);
 	
 	void pressC(int account_number);
 	

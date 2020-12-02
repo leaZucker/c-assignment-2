@@ -16,28 +16,34 @@ void pressB(int account_number){
 		int open = bank[index][2];
 		if(open == OPEN){
 			bank[index][0] = account_number;
-			printf("Account number : %d , amount: %.2lf \n",(int)account_number,bank[index][1]);
+			printf("The balance of account number %d is: %.2lf \n",(int)account_number,bank[index][1]);
 		}
 		else printf("the account is close try to open it first or a diffrent account number \n");
 	}
 	else printf("unvalid account number return to starting menu \n");
 }
 
-void pressD(int account_number, double amount){
+void pressD(int account_number){
 	if(account_number >900&&account_number<950){
 		int index = account_number-901;
 		int open = bank[index][2];
 		if(open == OPEN){
-			bank[index][0] = account_number;
-			bank[index][1] += amount;
-			printf("Account number : %d , amount: %.2lf \n",(int)account_number,bank[index][1]);
+			printf("Please Please enter amount for deposit:\n");
+			if(scanf("%lf",&amount)==1){
+				bank[index][0] = account_number;
+				bank[index][1] += amount;
+				printf("Account number : %d , amount: %.2lf \n",(int)account_number,bank[index][1]);
+			}
+			else{
+				printf("Unvalid amount for deposit");
+			}
 		}
 		else printf("the account is close try to open it first or a diffrent account number \n");
 	}
 	else printf("unvalid account number return to starting menu \n");
 }
 
-void pressW(int account_number, double amount){
+void pressW(int account_number){
 	if(account_number >900&&account_number<950){
 		int index = account_number-901;
 		int open = bank[index][2];
@@ -56,10 +62,16 @@ void pressC(int account_number){
 		int index = account_number-901;
 		int open = bank[index][2];
 		if(open == OPEN){
-			bank[index][0] = account_number;
-			bank[index][1] = 0;
-			bank[index][2] = CLOSE;
-			printf("Account number : %d closed \n",(int)account_number);
+			printf("Please Please enter amount for withdrawal:\n");
+			if(scanf("%lf",&amount)==1){
+				bank[index][0] = account_number;
+				bank[index][1] = 0;
+				bank[index][2] = CLOSE;
+				printf("Account number : %d closed \n",(int)account_number);
+			}	
+			else{
+				printf("Unvalid amount for withdrawal ");
+			}
 		}
 		else printf("the account is close try to open it first or a diffrent account number \n");
 	}

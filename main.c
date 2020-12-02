@@ -15,7 +15,7 @@ int main(){
 					printf("All accounts are opened");
 					break;
 				}
-				printf("Please Please enter amount for deposit:\n");
+				printf("Please enter amount for deposit:\n");
 				if(scanf("%lf",&amount)==1)
 					pressO(account_number,amount);
 				else{
@@ -28,7 +28,7 @@ int main(){
 					printf("All accounts are opened");
 					break;
 				}
-				printf("Please Please enter amount for deposit:\n");
+				printf("Please enter amount for deposit:\n");
 				if(scanf("%lf",&amount)==1)
 					pressO(account_number,amount);
 				else{
@@ -56,9 +56,7 @@ int main(){
 			case 'D':
 				printf("Please enter account number:\n");
 				if(scanf("%d",&account_number)==1){
-					printf("Please Please enter amount for deposit:\n");
-					if(scanf("%lf",&amount)==1){
-						pressD(account_number,amount);
+						pressD(account_number);
 					}
 					else{
 						printf("Unvalid amount for deposit");
@@ -71,12 +69,7 @@ int main(){
 			case 'd':
 				printf("Please enter account number:\n");
 				if(scanf("%d",&account_number)==1){
-					printf("Please Please enter amount for deposit:\n");
-					if(scanf("%lf",&amount)==1){
-						pressD(account_number,amount);
-					}
-					else{
-						printf("Unvalid amount for deposit");
+						pressD(account_number);
 					}
 				}
 				else {
@@ -86,13 +79,7 @@ int main(){
 			case 'W':
 				printf("Please enter account number:\n");
 				if(scanf("%d",&account_number)==1){
-					printf("Please Please enter amount for withdrawal:\n");
-					if(scanf("%lf",&amount)==1){
-						pressW(account_number,amount);
-					}
-					else{
-						printf("Unvalid amount for withdrawal ");
-					}
+						pressW(account_number);
 				}
 				else {
 					printf("Unvalid account number input");
@@ -101,13 +88,7 @@ int main(){
 			case 'w':
 				printf("Please enter account number:\n");
 				if(scanf("%d",&account_number)==1){
-					printf("Please Please enter amount for withdrawal:\n");
-					if(scanf("%lf",&amount)==1){
-						pressW(account_number,amount);
-					}
-					else{
-						printf("Unvalid amount for withdrawal");
-					}
+						pressW(account_number);
 				}
 				else {
 					printf("Unvalid account number input");
